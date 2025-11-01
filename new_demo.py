@@ -4,11 +4,12 @@ import datetime
 import re
 
 def get_connection():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="test"
+     return mysql.connector.connect(
+        host=st.secrets["sql12.freesqldatabase.com"],      # e.g. "sql12.freesqldatabase.com"
+        user=st.secrets["sql12805592"],      # your DB username
+        password=st.secrets["i1dgYYx6ac"],  # your DB password
+        database=st.secrets["sql12805592"],  # your DB name
+        port=st.secrets["3306"]  
     )
 
 st.set_page_config(page_title="All Submitted Data", layout="wide")
@@ -81,4 +82,5 @@ if submitted:
             st.switch_page("pages/show_data.py")
 
         except mysql.connector.Error as err:
+
             st.error(f"❌ Database error: {err}")
