@@ -16,8 +16,7 @@ def get_connection():
         user=st.secrets["sql12805592"],      # your DB username
         password=st.secrets["i1dgYYx6ac"],  # your DB password
         database=st.secrets["sql12805592"],  # your DB name
-        port=st.secrets["3306"]
-    )
+        port=st.secrets["3306"]    )
 
 # ---------------------------
 # Fetch data
@@ -77,4 +76,5 @@ if rows:
 
 else:
     st.warning("No records found in the database.")
+
 
