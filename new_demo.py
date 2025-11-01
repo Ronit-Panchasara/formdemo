@@ -84,3 +84,4 @@ if submitted:
         except mysql.connector.Error as err:
 
             st.error(f"❌ Database error: {err}")
+
