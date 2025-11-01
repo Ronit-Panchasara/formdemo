@@ -9,8 +9,7 @@ def get_connection():
         user=st.secrets["sql12805592"],      # your DB username
         password=st.secrets["i1dgYYx6ac"],  # your DB password
         database=st.secrets["sql12805592"],  # your DB name
-        port=st.secrets["3306"]
-    )
+        port=st.secrets["3306"]    )
 
 # ---------------- Fetch Record ----------------
 def fetch_record(row_id):
@@ -140,4 +139,5 @@ with st.form("update_form"):
             st.success("Record updated successfully! ✅")
             st.session_state.pop("update_id", None)
             st.switch_page("pages/show_data.py")
+
 
