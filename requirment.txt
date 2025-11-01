@@ -1,5 +1,0 @@
-mysql-connector-python
-streamlit
-Pillow
-requests
-streamlit-lottie
