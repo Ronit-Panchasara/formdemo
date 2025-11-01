@@ -12,11 +12,12 @@ st.set_page_config(page_title="All Submitted Data", layout="wide")
 # ---------------------------
 def get_connection():
      return mysql.connector.connect(
-        host=st.secrets["sql12.freesqldatabase.com"],      # e.g. "sql12.freesqldatabase.com"
-        user=st.secrets["sql12805592"],      # your DB username
-        password=st.secrets["i1dgYYx6ac"],  # your DB password
-        database=st.secrets["sql12805592"],  # your DB name
-        port=st.secrets["3306"]    )
+         host=st.secrets["DB_HOST"],
+        user=st.secrets["DB_USER"],
+        password=st.secrets["DB_PASSWORD"],
+        database=st.secrets["DB_NAME"],
+        port=st.secrets["DB_PORT"]    
+)
 
 # ---------------------------
 # Fetch data
@@ -76,5 +77,6 @@ if rows:
 
 else:
     st.warning("No records found in the database.")
+
 
 
